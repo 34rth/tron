@@ -18,20 +18,31 @@ cd java-tron
 git checkout -t origin/master
 ./gradlew build
 ```
+### Running
+#### Running a Private Testnet
 Run the code and check it works
 ```
 ./gradlew run
 ```
-Stop it and now copy the config and start modify it
+Stop it and now copy the `config.conf` and start modify it
 ```
 cp src/main/resources/config.conf .
 nano config.conf
 ```
-Update the `seed.node.ip.list` array with your private testnet - the IPs are allocated by yourself, e.g. add ours `94.130.165.82` and
-run the server
+Update the 
+* `seed.node.ip.list` array with your private testnet - the IPs are allocated by yourself, e.g. add ours `94.130.165.82` 
+* `genesis.block.witnesses` replace to yourself address - Register on [tronscan.org](https://tronscan.org/#/login) to get the yourself address
+* `seed.node` `ip.list` replace to yourself ip list
+and run the server
 ```
 ./gradlew run
 ```
+#### Running as Super Node
+Update the `localwitness` in the `config.conf` with your received password from registering at [tronscan.org](https://tronscan.org/#/login) and run the server
+```
+./gradlew run -Pwitness=true
+```
+
 For more configurations like _Running a local node and connecting to the public testnet_ or _Running a Super Node_ which is visible node on [tronscan.org](https://tronscan.org/#/network) visit the [java-tron GitHub Repository](https://github.com/tronprotocol/java-tron)
 
 # Links
