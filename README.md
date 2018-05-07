@@ -1,6 +1,6 @@
 # Tron
 
-## Setting up a Tron test node
+## Setting up your own Tron node
 Setup ubuntu and then execute following comands:
 
 ```
