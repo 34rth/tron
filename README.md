@@ -31,7 +31,14 @@ nano config.conf
 ```
 Update the 
 * `seed.node.ip.list` array with your private testnet - the IPs are allocated by yourself, e.g. add ours `94.130.165.82` 
-* `genesis.block.witnesses` replace to yourself address - Register on [tronscan.org](https://tronscan.org/#/login) to get the yourself address
+* `genesis.block.witnesses` replace to yourself address - Register on [tronscan.org](https://tronscan.org/#/login) to get the yourself address, e.g.
+```
+   {
+      address: 27k*******************************Z
+      url = "https://yoursite",
+      voteCount = 94
+   }
+```
 * `seed.node` `ip.list` replace to yourself ip list
 and run the server
 ```
