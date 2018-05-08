@@ -45,9 +45,22 @@ and run the server
 ./gradlew run
 ```
 #### Running as Super Node
-Update the `localwitness` in the `config.conf` with your received password from registering at [tronscan.org](https://tronscan.org/#/login) and run the server
+Update the `config.conf`:
+
+* the `localwitness` in  with your received password from registering at [tronscan.org](https://tronscan.org/#/login) 
+* `genesis.block.witnesses` replace to yourself address
+* `seed.node.ip.list` replace to yourself ip list
+* the first Super Node start, `needSyncCheck` should be set `false`
+* set `p2pversion` to `61`
+
+and run the server
 ```
 ./gradlew run -Pwitness=true
+```
+or
+```
+cd build/libs
+java -Djava.net.preferIPv4Stack=true -Xms1024m -Xmx8024m -jar java-tron.jar -p _YOUR_PRIVATE_KEY_ private key --witness -c _YOUR_CONFIG_PATH_/config.conf
 ```
 
 For more configurations like _Running a local node and connecting to the public testnet_ or _Running a Super Node_ which is visible node on [tronscan.org](https://tronscan.org/#/network) visit the [java-tron GitHub Repository](https://github.com/tronprotocol/java-tron)
