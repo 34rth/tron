@@ -60,7 +60,7 @@ and run the server
 or
 ```
 cd build/libs
-java -Djava.net.preferIPv4Stack=true -Xms1024m -Xmx8024m -jar java-tron.jar -p _YOUR_PRIVATE_KEY_ private key --witness -c _YOUR_CONFIG_PATH_/config.conf
+java -Djava.net.preferIPv4Stack=true -Xms1024m -Xmx8024m -jar java-tron.jar -p _YOUR_PRIVATE_KEY_ --witness -c _YOUR_CONFIG_PATH_/config.conf
 ```
 
 For more configurations like _Running a local node and connecting to the public testnet_ or _Running a Super Node_ which is visible node on [tronscan.org](https://tronscan.org/#/network) visit the [java-tron GitHub Repository](https://github.com/tronprotocol/java-tron)
