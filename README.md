@@ -2,7 +2,7 @@
 
 ## 34rth Tron Testnet
 Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the same machine, but we will expand it in the future.
-The branch is master and we will update it daily.
+The branch is **master** and we will update it daily.
 Please feel free to comment and [post issues](https://github.com/34rth/tron/issues).
 
 ### Connect to our Tron Testnet
