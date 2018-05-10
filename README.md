@@ -58,12 +58,12 @@ block = {
 }
 ```
 
-Start your Full Node:
+Start as Full Node:
 ```
 cd YOUR_PATH
 java -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -Xms1024m -Xmx8024m -Dfile.encoding=UTF-8 -jar java-tron.jar -c config.conf
 ```
-Start a Super Node node:
+Start as Super Node:
 ```
 cd YOUR_PATH
 java -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -Xms1024m -Xmx8024m -Dfile.encoding=UTF-8 -jar java-tron.jar -p YOUR_PRIVATE_KEY --witness -c config.conf
