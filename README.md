@@ -1,6 +1,75 @@
 # Tron
 
-## Setting up your own Tron node
+## 34rth Tron Testnet Node
+Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the same machine, but we will expand it in the future.
+The branch is master and we will update it daily.
+Please feel free to comment and [post issues](https://github.com/34rth/tron/issues).
+
+### Connect to our Tron Testnet Node
+Please follow the instructions of section **Setting up your own Tron Node** for building your own Node.
+Please copy the config.conf file and edit following:
+
+* `node.discovery` `_YOUR_IP` to your IP address
+* `node.p2p.version` to `333`
+* Copy the `genesis.block.witnesses` from following example
+* `block.needSyncCheck` has to be `true`
+
+```
+net {
+  type = testnet
+}
+...
+node.discovery = {
+  enable = true
+  persist = true
+  bind.ip = _YOUR_IP
+  external.ip = _YOUR_IP
+}
+node {
+  ...
+  p2p {
+    version = 333 # 61: testnet; 101: debug
+  }
+}
+...
+seed.node = {
+  ...
+  ip.list = 
+  [
+    "94.130.165.82:18889"
+  ]
+}
+...
+genesis.block = {
+  ...
+  witnesses = [
+    {
+      address: 27SYSXHYY9TNomsjPaVbFt9FpcKBpkWYYUa
+      url = "https://tron.34rth.com/",
+      voteCount = 101
+    }
+  ]
+  ...
+}
+...
+block = {
+  needSyncCheck = true # first node : false, other : true
+  maintenanceTimeInterval = 5000 // 1 day: 86400000(ms), 6 hours: 21600000(ms)
+}
+```
+
+Start your Full Node:
+```
+cd YOUR_PATH
+java -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -Xms1024m -Xmx8024m -Dfile.encoding=UTF-8 -jar java-tron.jar -c config.conf
+```
+Start a Super Node node:
+```
+cd YOUR_PATH
+java -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -Xms1024m -Xmx8024m -Dfile.encoding=UTF-8 -jar java-tron.jar -p YOUR_PRIVATE_KEY --witness -c config.conf
+```
+
+## Setting up your own Tron Node
 Setup ubuntu and then execute following comands:
 
 ```
