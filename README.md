@@ -11,6 +11,7 @@ Please copy the config.conf file and edit following:
 
 * `node.discovery` `_YOUR_IP` to your IP address
 * `node.p2p.version` to `333`
+* Add our seed Node in the array `seed.node.ip.list`: `94.130.165.82:18889`
 * Copy the `genesis.block.witnesses` from following example
 * `block.needSyncCheck` has to be `true`
 
