@@ -10,6 +10,7 @@ Please follow the instructions of section **Setting up your own Tron Node** for 
 Please copy the config.conf file and edit following:
 
 * `node.discovery` `_YOUR_IP` to your IP address
+* Our `node.rpc.port` is `50052`
 * `node.p2p.version` to `333`
 * Add our seed Node in the array `seed.node.ip.list`: `94.130.165.82:18889`
 * Copy the `genesis.block.witnesses` from following example
@@ -34,6 +35,7 @@ node {
 }
 ...
 seed.node = {
+  trustNode = "94.130.165.82:50052"
   ...
   ip.list = 
   [
