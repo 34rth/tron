@@ -28,6 +28,7 @@ node.discovery = {
   external.ip = _YOUR_IP
 }
 node {
+  trustNode = "94.130.165.82:50052"
   ...
   p2p {
     version = 333 # 61: testnet; 101: debug
