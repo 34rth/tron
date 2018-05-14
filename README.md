@@ -1,11 +1,11 @@
 # Tron
 
-## 34rth Tron Testnet
+## 34rth private Tron Testnet
 Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the same machine, but we will expand it in the future.
 The branch is **master** and we will update it daily.
 Please feel free to comment and [post issues](https://github.com/34rth/tron/issues).
 
-### Connect to our Tron Testnet
+### Connect to our private Tron Testnet
 Please follow the instructions of section **Setting up your own Tron Node** for building your own Node.
 Please copy the config.conf file and edit following:
 
@@ -104,15 +104,6 @@ nano config.conf
 ```
 Update the 
 * `seed.node.ip.list` array with your private testnet - the IPs are allocated by yourself, e.g. add ours `94.130.165.82` 
-* `genesis.block.witnesses` replace to yourself address - Register on [tronscan.org](https://tronscan.org/#/login) to get the yourself address, e.g.
-```
-   {
-      address: 27k*******************************Z
-      url = "https://yoursite",
-      voteCount = 94
-   }
-```
-* `seed.node` `ip.list` replace to yourself ip list
 and run the server
 ```
 ./gradlew run
@@ -121,7 +112,6 @@ and run the server
 Update the `config.conf`:
 
 * the `localwitness` in  with your received password from registering at [tronscan.org](https://tronscan.org/#/login) 
-* `genesis.block.witnesses` replace to yourself address
 * `seed.node.ip.list` replace to yourself ip list
 * the first Super Node start, `needSyncCheck` should be set `false`
 * set `p2pversion` to `61`
