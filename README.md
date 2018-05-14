@@ -5,6 +5,10 @@ Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the 
 The branch is **master** and we will update it daily.
 Please feel free to comment and [post issues](https://github.com/34rth/tron/issues).
 
+* The Super Node IP:PORT is 94.130.165.82:18889 the RPC port is 50052
+* Full Node 1 IP:PORT is 94.130.165.82:18890 the RPC port is 50053
+* Full Node 2 IP:PORT is 94.130.165.82:18891 the RPC port is 50054
+
 ### Connect to our private Tron Testnet
 Please follow the instructions of section **Setting up your own Tron Node** for building your own Node.
 Please copy the config.conf file and edit following:
@@ -20,7 +24,6 @@ Please copy the config.conf file and edit following:
 net {
   type = testnet
 }
-...
 node.discovery = {
   enable = true
   persist = true
@@ -29,23 +32,17 @@ node.discovery = {
 }
 node {
   trustNode = "94.130.165.82:50052"
-  ...
   p2p {
-    version = 333 # 61: testnet; 101: debug
+    version = 333
   }
 }
-...
 seed.node = {
-  trustNode = "94.130.165.82:50052"
-  ...
   ip.list = 
   [
     "94.130.165.82:18889"
   ]
 }
-...
 genesis.block = {
-  ...
   witnesses = [
     {
       address: 27SYSXHYY9TNomsjPaVbFt9FpcKBpkWYYUa
@@ -53,9 +50,7 @@ genesis.block = {
       voteCount = 101
     }
   ]
-  ...
 }
-...
 block = {
   needSyncCheck = true # first node : false, other : true
   maintenanceTimeInterval = 5000 // 1 day: 86400000(ms), 6 hours: 21600000(ms)
