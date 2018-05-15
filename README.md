@@ -5,6 +5,7 @@ Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the 
 The branch is **master** and we will update it daily.
 Please feel free to comment and [post issues](https://github.com/34rth/tron/issues).
 
+* Version is 333
 * The Super Node IP:PORT is 94.130.165.82:18889 the RPC port is 50052
 * Full Node 1 IP:PORT is 94.130.165.82:18890 the RPC port is 50053
 * Full Node 2 IP:PORT is 94.130.165.82:18891 the RPC port is 50054
