@@ -18,7 +18,7 @@ Please copy the config.conf file and edit following:
 * Our `node.rpc.port` is `50052`
 * `node.p2p.version` to `333`
 * Add our seed Node in the array `seed.node.ip.list`: `94.130.165.82:18889`
-* Copy the `genesis.block.witnesses` from following example
+* Copy the `genesis.block` from following example
 * `block.needSyncCheck` has to be `true`
 
 ```
@@ -44,6 +44,33 @@ seed.node = {
   ]
 }
 genesis.block = {
+ # Reserve balance
+  assets = [
+    {
+      accountName = "Devaccount"
+      accountType = "AssetIssue"
+      address = "27d3byPxZXKQWfXX7sJvemJJuv5M65F3vjS"
+      balance = "10000000000000000"
+    },
+    {
+      accountName = "Zion"
+      accountType = "AssetIssue"
+      address = "27fXgQ46DcjEsZ444tjZPKULcxiUfDrDjqj"
+      balance = "15000000000000000"
+    },
+    {
+      accountName = "Sun"
+      accountType = "AssetIssue"
+      address = "27SWXcHuQgFf9uv49FknBBBYBaH3DUk4JPx"
+      balance = "10000000000000000"
+    },
+    {
+      accountName = "Blackhole"
+      accountType = "AssetIssue"
+      address = "27WtBq2KoSy5v8VnVZBZHHJcDuWNiSgjbE3"
+      balance = "-9223372036854775808"
+    }
+  ]
   witnesses = [
     {
       address: 27SYSXHYY9TNomsjPaVbFt9FpcKBpkWYYUa
@@ -56,6 +83,13 @@ block = {
   needSyncCheck = true # first node : false, other : true
   maintenanceTimeInterval = 5000 // 1 day: 86400000(ms), 6 hours: 21600000(ms)
 }
+```
+
+Or clone this repo and copy the private-testnet-example.conf to your java-tron folder:
+
+```
+git clone https://github.com/34rth/tron
+cp tron/private-testnet-example.conf YOUR_PATH/config.conf
 ```
 
 Start as Full Node:
