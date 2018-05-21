@@ -11,8 +11,8 @@ TRON_PATH=_YOUR_FULL_PATH_
 TRON_KEY=_YOUR_KEY_
 
 # Other config values
-TRON_CONFIG="config-test.conf"
-TRON_SCREEN="test-tron0"
+TRON_CONFIG="config.conf"
+TRON_SCREEN="tron"
 TRON_PULL=$(git pull)
 TRON_PULL_GOOD="Already up-to-date!"
 TRON_TIME=$(date +"%Y-%m-%d %T")
