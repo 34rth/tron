@@ -37,7 +37,7 @@ else
   fi
   
   echo "3. Trying to start/restart";
-    if ! ( screen -ls | grep $TRON_SCREEN > /dev/null); then
+  if ! ( screen -ls | grep $TRON_SCREEN > /dev/null); then
     echo "4. Create new screen";
     screen -dmS $TRON_SCREEN;
   else
@@ -53,5 +53,3 @@ else
   
   echo "5. Started";
 fi
-
-#screen -X -S test-tron0 stuff "^C"
