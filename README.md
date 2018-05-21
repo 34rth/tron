@@ -1,5 +1,9 @@
 # Tron
 
+## Updates
+- 2018-05-21: We added a small bash script for cron checking Tron github and start/restarting your Super Node. Check it out! [compare.sh](https://github.com/34rth/tron/blob/master/compare.sh)
+- 2018-05-19: Update of testing _34rth private Tron Testnet_ from user [pynki](https://github.com/34rth/tron/pulls?q=is%3Apr+author%3Apynki). Thank you!
+
 ## 34rth private Tron Testnet
 Our testnet nodes (2 Full Nodes, 1 Super Node) are running at the moment on the same machine, but we will expand it in the future.
 The branch is **master** and we will update it daily.
@@ -157,6 +161,17 @@ java -Djava.net.preferIPv4Stack=true -Xms1024m -Xmx8024m -jar java-tron.jar -p _
 ```
 
 For more configurations like _Running a local node and connecting to the public testnet_ or _Running a Super Node_ which is visible node on [tronscan.org](https://tronscan.org/#/network) visit the [java-tron GitHub Repository](https://github.com/tronprotocol/java-tron)
+
+# Scripts
+
+## A small bash script for cron checking Tron github and start/restarting your Super Node. Check it out! 
+[compare.sh](https://github.com/34rth/tron/blob/master/compare.sh)
+This script checks for git updates and especially changes in the config.conf (Before running this script, 
+should have installed everything necessary and checked out https://github.com/tronprotocol/java-tron)
+If there are changes, we rebuild the code, copy the new config.conf and restart the server with our witness key
+Edit your crontab with crontab -e and add e.g. a check every 10 minutes:
+*/5 * * * * /home/YOUR_PATH/compare.sh
+Before adding to cron, test your script in the command line and for cron errors check your syslog.
 
 # Links
 #### Great video tutorial from user _isybub6_ for starting your own Tron test node:
