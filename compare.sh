@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script checks for git updates and especially changes in the config.conf (Before running this script, 
-# should have installed everything necessary and checked out https://github.com/tronprotocol/java-tron)
+# you should have installed everything necessary and checked out https://github.com/tronprotocol/java-tron)
 # If there are changes, we rebuild the code, copy the new config.conf and restart the server with our witness key
 # Edit your crontab with crontab -e and add e.g. a check every 10 minutes:
 # */5 * * * * /home/YOUR_PATH/compare.sh
