@@ -14,7 +14,7 @@ TRON_KEY=_YOUR_KEY_
 TRON_CONFIG="config.conf"
 TRON_SCREEN="tron"
 TRON_PULL=$(git pull)
-TRON_PULL_GOOD="Already up-to-date!"
+TRON_PULL_GOOD="Already up-to-date."
 TRON_TIME=$(date +"%Y-%m-%d %T")
 
 # ###############################################################################
